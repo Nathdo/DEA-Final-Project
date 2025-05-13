@@ -17,14 +17,14 @@ This project evaluates the efficiency of academic institutions in Israel using *
 - **Inputs**: Expenses, staff numbers, salaries, etc.
 - **Outputs**: Number of students, income, research citations, alumni value
 
-![DEA Lambdas](Images/lambdas.png)
+  ![DEA Matrix](Images/matrix.png)
 
 ## Institutions Analyzed
 
 - **7 Universities** (e.g., Tel Aviv, Technion, Hebrew University)
 - **9 Engineering Colleges** (e.g., Afeka, ORT Braude, Shenkar)
 
-  ![DEA Matrix](Images/matrix.png)
+  ![DEA Lambdas](Images/lambdas.png)
 
 ## Future Plans
 
