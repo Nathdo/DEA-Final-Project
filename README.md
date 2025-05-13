@@ -45,6 +45,7 @@ This project evaluates the efficiency of academic institutions in Israel using *
 - Shiri Ben Eliyahu
 - Yehonatan Levy
 - Nathan Douieb
+- Shaden Jadallah
 
 **Supervised by**: Dr. Gabriel David Pinto
 
