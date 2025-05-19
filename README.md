@@ -20,7 +20,7 @@ This project evaluates the efficiency of academic institutions in Israel using *
 - **Inputs**: Expenses, staff numbers, salaries, etc.
 - **Outputs**: Number of students, income, research citations, alumni value
 
-![DEA Flow](images/lambdas.png)
+![DEA Flow](Images/lambdas.png)
 
 
 ## Institutions Analyzed
