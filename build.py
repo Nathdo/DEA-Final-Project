@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+
 import matplotlib.pyplot as plt
 import seaborn as sns
 import warnings
@@ -31,6 +32,7 @@ def data_staff(column_name, staff_code):
     return staff
 
 
+<<<<<<< HEAD
 def bar_plot(data, Institution_ID:int, year:int, exp_num:int, show:bool=False):
     ''' 
     Return Efficiency BarChart or store it for later display.
@@ -62,5 +64,7 @@ def bar_plot(data, Institution_ID:int, year:int, exp_num:int, show:bool=False):
         'Turn show to True to see the graphic result.'
 
 
+=======
+>>>>>>> 254f8ad (Restored files from temp_safety)
 
 
