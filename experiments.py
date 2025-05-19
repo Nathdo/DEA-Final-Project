@@ -61,7 +61,7 @@ def Experience4(data, marketing_expenses, admin_staff, senior_staff, mention, fi
     return data
 
 
-def Experience5(data, shetah, mention, final_institute):
+def Experience5(data, shetah, mention, admin_staff, final_institute):
     ''' 
     Experience 5 -  Infrastructure Efficiency
     inputs ==  Gross_area, Administrative Staff
@@ -70,6 +70,7 @@ def Experience5(data, shetah, mention, final_institute):
     data = data[['Institution_YearCode', 'Year', 'Students']]
     data = pd.merge(data, final_institute, on = ['Institution_YearCode'], how = 'inner')
     data = pd.merge(data, shetah, on = ['Institution_Code'], how = 'inner')
+    data = pd.merge(data, admin_staff, on = ['Institution_YearCode', 'Year'], how = 'inner')
     data = pd.merge(data, mention, on = ['Institution_YearCode'], how = 'inner')
     data = data.drop(columns = ['Institution_Code', 'Citations Count'], axis = 1)
     return data

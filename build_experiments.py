@@ -97,7 +97,7 @@ exp4_2023 = Experience4(data = data_2023, marketing_expenses = marketing_expense
 ### Shetah Data
 shetah = pd.read_excel('Data.xlsx', sheet_name = 'Gross_Area')
 
-exp5_2014 = Experience5(data = data_2014, shetah = shetah, mention = mention, final_institute = final_institute)
-exp5_2016 = Experience5(data = data_2016, shetah = shetah, mention = mention, final_institute = final_institute)
-exp5_2021 = Experience5(data = data_2021, shetah = shetah, mention = mention, final_institute = final_institute)
-exp5_2023 = Experience5(data = data_2023, shetah = shetah, mention = mention, final_institute = final_institute)
+exp5_2014 = Experience5(data = data_2014, shetah = shetah, mention = mention, admin_staff = admin_staff, final_institute = final_institute)
+exp5_2016 = Experience5(data = data_2016, shetah = shetah, mention = mention, admin_staff = admin_staff, final_institute = final_institute)
+exp5_2021 = Experience5(data = data_2021, shetah = shetah, mention = mention, admin_staff = admin_staff, final_institute = final_institute)
+exp5_2023 = Experience5(data = data_2023, shetah = shetah, mention = mention, admin_staff = admin_staff, final_institute = final_institute)

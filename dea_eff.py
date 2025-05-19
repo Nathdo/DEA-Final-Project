@@ -12,18 +12,22 @@ def exp_dea(data, Institution_ID:list, inputs_columns:list, outputs_columns:list
         data: Experiment data year
         Institution_ID: List of the type of institutions (list of both if vrs method)
         method: 'crs' or 'vrs' method
+
+    return: efficiency results, Institutions Names  
     '''
     data = data[data.Institution_TypeID.isin(Institution_ID)]
     inputs = data[inputs_columns]
     outputs = data[outputs_columns]
     dmu = list(data['Institution_Name'])
     dea_model = dea(inputs, outputs, rts = method, orientation = "input")
-    return dea_model.eff                             
+    return dea_model.eff, dmu                           
+
 
 
 #------------------------------------------------------------------------------------------------------------------------------------------
 # Experiment 1
 from build_experiments import exp1_2014, exp1_2016, exp1_2021, exp1_2023
+
 
 # Experiment 1 - Universities
 exp1_2014_uni = exp_dea(data = exp1_2014, Institution_ID = [1], inputs_columns = ['Marketing_Expenses', 'Administratif_Staff'] ,
