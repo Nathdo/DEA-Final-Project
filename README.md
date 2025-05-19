@@ -9,6 +9,9 @@ This project evaluates the efficiency of academic institutions in Israel using *
 - Identify institutions with high or low efficiency
 - Support decision-making for policymakers and academic managers
 
+![DEA Flow](Images/matrix.png)
+
+
 ## Methodology
 
 - **Method**: Data Envelopment Analysis (non-parametric)
