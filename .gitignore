@@ -1,7 +1,17 @@
+# Environnements virtuels
+DEA/
 .venv/
+
+# Caches Python
 __pycache__/
+
+# MacOS
 .DS_Store
+
+# Jupyter Notebook
 .ipynb_checkpoints/
+
+# Fichiers de données ou notebooks à ignorer
 Data.xlsx
 DEA.ipynb
 DEA_New.ipynb
