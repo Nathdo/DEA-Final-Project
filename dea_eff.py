@@ -20,7 +20,10 @@ def exp_dea(data, Institution_ID:list, inputs_columns:list, outputs_columns:list
     outputs = data[outputs_columns]
     dmu = list(data['Institution_Name'])
     dea_model = dea(inputs, outputs, rts = method, orientation = "input")
-    return dea_model.eff, dmu                           
+
+    lambdas = dea_model.lambdas
+    lambdas = np.array([l / np.sum(l) if np.sum(l) > 1 else l for l in lambdas])
+    return dea_model.eff, dmu, lambdas                    
 
 
 

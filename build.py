@@ -32,18 +32,17 @@ def data_staff(column_name, staff_code):
     return staff
 
 
-<<<<<<< HEAD
-def bar_plot(data, Institution_ID:int, year:int, exp_num:int, show:bool=False):
+def bar_plot(data, Institution_ID:int, year:int, exp_num:int, show:bool=False, lambdas:bool = False, figsize:tuple = (15, 5)):
     ''' 
     Return Efficiency BarChart or store it for later display.
 
     args:
-        data: Tuple (efficiency_scores, institution_names)
+        data: Tuple (efficiency_scores, institution_names, lambdas_scores)
         Institution_ID: 1 for universities, 0 for colleges
         year: Year of the analysis
         show: If True, shows the plot immediately
     '''
-    eff_scores, institution_names = data
+    eff_scores, institution_names, lambdas_scores = data
     df_eff = pd.DataFrame({'Institution': institution_names, 'Efficiency Score': eff_scores})
     institute = 'Universities' if Institution_ID == 1 else 'Colleges'
 
@@ -52,7 +51,7 @@ def bar_plot(data, Institution_ID:int, year:int, exp_num:int, show:bool=False):
 
     if show:
         sns.set(style = "whitegrid")
-        fig, ax = plt.subplots(figsize = (15, 5))
+        fig, ax = plt.subplots(figsize = figsize)
         ax = sns.barplot(data = df_eff, y = 'Institution', x = 'Efficiency Score', hue = 'Category', dodge = False, palette = colors)
         ax.set_xlim(0, 1.1)
         ax.set_title(f'DEA Efficiency Scores – Experiment {exp_num} - {institute} ({str(year)})', fontsize = 16)
@@ -60,11 +59,18 @@ def bar_plot(data, Institution_ID:int, year:int, exp_num:int, show:bool=False):
         plt.legend(title = 'Institution Type', loc = 'lower right')
         plt.tight_layout()
         plt.show()
+
+        if lambdas:
+            lambda_matrix = lambdas_scores
+            plt.figure(figsize=(18, 6))
+            sns.heatmap(lambda_matrix, annot = True, cbar = False, cmap = 'Blues',
+                        xticklabels = institution_names, yticklabels = institution_names)
+            plt.title(f'DEA Lambdas Scores – Experiment {exp_num} - {institute} ({str(year)})', fontsize = 16, y = 1.04)
+            plt.tight_layout()
+            plt.show()
     else:
         'Turn show to True to see the graphic result.'
 
 
-=======
->>>>>>> 254f8ad (Restored files from temp_safety)
 
 
