@@ -9,6 +9,9 @@ This project evaluates the efficiency of academic institutions in Israel using *
 - Identify institutions with high or low efficiency
 - Support decision-making for policymakers and academic managers
 
+![DEA Flow](Images/matrix.png)
+
+
 ## Methodology
 
 - **Method**: Data Envelopment Analysis (non-parametric)
@@ -16,6 +19,9 @@ This project evaluates the efficiency of academic institutions in Israel using *
 - **Models**: Constant Returns to Scale (CRS) and Variable Returns to Scale (VRS)
 - **Inputs**: Expenses, staff numbers, salaries, etc.
 - **Outputs**: Number of students, income, research citations, alumni value
+
+![DEA Flow](Images/lambdas.png)
+
 
 ## Institutions Analyzed
 
